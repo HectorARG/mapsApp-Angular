@@ -4,9 +4,9 @@
 <div class="row">
   <div class="col-12">
     <label>
-      Zoom: 15 - Lng,Lat: [123,13]
+      Zoom: {{ zoomLevel | number: '2.0-2' }} - Lng,Lat: [123,13]
     </label>
-    <input type="range" class="form-range">
+    <input type="range" class="form-range" [value]="zoomLevel" min="0" max="18"  (input)="zoomCambio( zoomInput.value )" #zoomInput>
   </div>
 <div class="col-12">
   <button class="btn btn-primary" (click)="zoomOut()">
