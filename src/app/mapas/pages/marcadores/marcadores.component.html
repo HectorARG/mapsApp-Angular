@@ -1,1 +1,13 @@
-<p>marcadores works!</p>
+
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info" (click)="agregarMarcador()">
+    + Agregar
+  </li>
+
+  <li class="list-group-item" (click)="irMarcador()" *ngFor="let marcador of marcadores; let i = index">
+    Marker {{i+1}}
+  </li>
+
+</ul>
+
+<div #mapamarcadores class="mapa-container"></div>
