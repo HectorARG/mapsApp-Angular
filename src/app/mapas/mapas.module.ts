@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { MapasRoutingModule } from './mapas-routing.module';
 import { MiniMapaComponent } from './components/mini-mapa/mini-mapa.component';

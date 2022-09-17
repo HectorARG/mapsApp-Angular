@@ -4,8 +4,14 @@
     + Agregar
   </li>
 
-  <li class="list-group-item" (click)="irMarcador()" *ngFor="let marcador of marcadores; let i = index">
-    Marker {{i+1}}
+  <li class="list-group-item"
+      *ngFor="let marcador of marcadores; let i = index"
+      (click)="irMarcador(marcador.marker!)"
+      [ngStyle]="{'background-color': marcador.color}">
+    Ubicación {{i+1}}
+    <button title="Eliminar" style="background-color: transparent; border-color: transparent" type="button" icon (click)="borrarMarcador(i)">
+      X
+    </button>
   </li>
 
 </ul>
